@@ -10,14 +10,22 @@
 <body>
 
     <nav>
-        <a href="#presentation">Présentation</a>
-        <a href="#formation">Formation</a>
-        <a href="#experience">Expérience</a>
-        <a href="#competences">Compétences</a>
-        <a href="#centres-interet">Centres d'intérêt</a>
-        <a href="#coordonnees">Coordonnées</a>
-        <a href="#contact-cfa">Contact-cfa</a>
+        <button id="menu-btn" aria-expanded="false" aria-label="Ouvrir le menu">
+        ☰ Menu
+        </button>
+
+        <div id="menu-links">
+            <a href="#presentation">Présentation</a>
+            <a href="#formation">Formation</a>
+            <a href="#experience">Expérience</a>
+            <a href="#competences">Compétences</a>
+            <a href="#centres-interet">Centres d'intérêt</a>
+            <a href="#coordonnees">Coordonnées</a>
+            <a href="#contact-cfa">Contact-cfa</a>
+        </div>
     </nav>
+
+    <div id="overlay"></div>
 
     <main>
 
@@ -32,7 +40,7 @@
 
         <section id="presentation">
             <h2>Présentation</h2>
-            <p>
+            <p class="important">
                 Titulaire d'un BTS Gestion de la PME, je me réoriente vers le développement web et applicatif 
                 en intégrant le BTS SIO option SLAM au CFA ITIS d'Évry. Mon stage en tant qu'assistant informatique 
                 m'a permis de m'initier à la programmation via Python et a confirmé mon choix d'orientation. 
@@ -55,7 +63,7 @@
 
             <article>
                 <h3>Baccalauréat professionnel Gestion Administration (Obtenu)</h3>
-                <p>Lycée Marcel Pagnol, <em>2018-2021, Ermont 95</em></p>
+                <p>Lycée Gustave Eiffel, <em>2018-2021, Ermont 95</em></p>
             </article>
         </section>
 
@@ -101,7 +109,7 @@
                 <li>Idris Bozor</li> 
                 <li>23 ans</li>  
                 <li><a href="mailto:idris.bozor@gmail.com">idris.bozor@gmail.com</a></li>
-                <li><strong>Téléphone:</strong> 06 . . . . . . . . (Disponible sur mon CV)</li>
+                <li><strong>Téléphone:</strong> 06 . . . . . . . . (Disponible sur mon CV PDF)</li>
                 <li>Mennecy 91</li>
                 <li>Permis en cours</li>
                 <li><strong>Mobilité:</strong> Essonne, Paris</li>
@@ -138,7 +146,7 @@
             <h3>En cours d'apprentissage</h3>
             <ul>
                 <li>Python: apprentissage autonome</li>
-                <li>HTML/CSS: apprentissage autonome</li>
+                <li>HTML/CSS/JS: apprentissage autonome</li>
             </ul>
 
             <h3>Langue</h3>
@@ -167,11 +175,12 @@
             </ul>
         </section>
     </aside>
-
+    
+    <script src="script.js"></script>
     <a href="#top">Retour en haut</a>
 
     <footer>
-        <p>&copy; 2026 - Idris Bozor - CV réalisé en HTML/CSS</p>
+        <p>&copy; 2026 - Idris Bozor - CV réalisé en HTML/CSS/JavaScript</p>
     </footer>
 </body>
 </html>
