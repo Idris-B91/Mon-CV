@@ -8,6 +8,22 @@
     --accent: #3d7eff;
 }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+@media (max-width: 767px) {
+    
+    html {
+        scroll-padding-top: 525px;
+    }
+    #menu-links{
+        top: 100%;
+        position: absolute;
+    }
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -64,6 +80,7 @@ h1 {
     main { width: 65%; float: left; }
     aside { width: 30%; float: right; }
     footer { clear: both; }
+
 }
 
 section {
@@ -141,6 +158,7 @@ footer {
 }
 
 @media (min-width: 768px){
+
     #menu-btn{
         display:none;
     }
