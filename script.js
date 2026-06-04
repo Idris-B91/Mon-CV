@@ -69,3 +69,39 @@ menuAnchors.forEach(function(anchor) {
         }
     });
 }); 
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+
+const darkModeBtn = document.querySelector('#dark-mode-btn');
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark');
+        darkModeBtn.textContent = '☀️';
+        darkModeBtn.setAttribute('aria-label', 'Activer le mode clair');
+    } else {
+        document.body.classList.remove('dark');
+        darkModeBtn.textContent = '🌙';
+        darkModeBtn.setAttribute('aria-label', 'Activer le mode sombre');
+    }
+    // Sauvegarder le choix
+    localStorage.setItem('theme', theme);
+}
+
+// Changer le thème au clic
+darkModeBtn.addEventListener('click', function() {
+    const estEnModeSombre = document.body.classList.contains('dark');
+    if (estEnModeSombre) {
+        setTheme('light');
+    } else {
+        setTheme('dark');
+    }
+});
+
+// Restaurer le dernier thème choisi au chargement de la page
+const themeSauvegardee = localStorage.getItem('theme');
+if (themeSauvegardee) {
+    setTheme(themeSauvegardee);
+}
