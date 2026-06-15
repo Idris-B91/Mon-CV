@@ -220,13 +220,114 @@ footer {
     }
 }
 
-a[href="#page-top"] {
+#projets {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#projets h2 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.carte-projet {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: var(--shadow-light);
+    border-left: 4px solid var(--accent);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.carte-projet:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.carte-projet--bientot {
+    opacity: 0.7;
+    border-left-color: var(--text-muted);
+}
+
+.carte-projet__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.carte-projet__emoji {
+    font-size: 1.8em;
+}
+
+.carte-projet__titre {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 1.1em;
+}
+
+.carte-projet__description {
+    color: var(--text-muted);
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.carte-projet__technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-tag {
+    background: var(--bg-page);
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 0.8em;
+    font-weight: 500;
+}
+
+.carte-projet__lien {
     display: inline-block;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: background 0.2s ease;
+    align-self: flex-start;
+}
+
+.carte-projet__lien:hover {
+    background: #2563eb;
+}
+
+.carte-projet__bientot {
+    color: var(--text-muted);
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+a[href="#page-top"] {
+    display: block;
+    width: max-content;
+    margin: 30px auto 10px auto;
     padding: 12px 24px;
     background: var(--accent);
     color: white;
     text-decoration: none;
     border-radius: 25px;
+    clear: both;
 }
 
 a[href="#page-top"]:hover {
@@ -244,4 +345,42 @@ a[href="#page-top"]:hover {
     background: rgba(0, 0, 0, 0.3); 
     display: none; 
     z-index: 5;    
+}
+
+.liens-sociaux {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ecf0f1;
+}
+
+.btn-social {
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    color: white !important;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 0.9em;
+    font-weight: 500;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-social.linkedin {
+    background-color: #0a66c2;
+}
+.btn-social.linkedin:hover {
+    background-color: #004182;
+    transform: translateY(-2px);
+}
+
+.btn-social.github {
+    background-color: #24292e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-social.github:hover {
+    background-color: #555;
+    transform: translateY(-2px);
 }
